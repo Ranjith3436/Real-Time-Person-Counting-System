@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    background-color: #08090f;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.dashboard {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-rows: auto auto;
+    gap: 100px;
+    width: 100%;
+    max-width: 1920px;
+}
+
+
+/* Heading */
+.heading_1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: rgb(198, 198, 198);
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+    -1px -1px 0 #5e5e5e,
+     1px -1px 0 #5e5e5e,
+    -1px  1px 0 #5e5e5e,
+     1px  1px 0 #5e5e5e,
+}
+
+
+/* Heading */
+.logo_heading_1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: rgb(57, 137, 166);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+}
+
+/* Container */
+.container-fluid {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+/* Count Card */
+.count-card {
+    background-color: rgba(126, 198, 210, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1), 
+                0 2px 4px rgba(0, 0, 0, 1);  /* Softer inner shadow */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Count Card Text */
+.count-card h5 {
+    color: rgb(6, 7, 16);
+    font-weight: bold;
+}
+
+.count-card span {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #222222;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #c7c7b6;
+    align-items: left;
+
+}
+
+/* Video Styling */
+.video-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 10px;
+}
+
+footer {
+    color: white;            /* White text */
+    text-align: center;      /* Center align text */
+    /* padding: 10px 0;         Add space above & below */
+    position: fixed;         /* Fix footer at the bottom */
+    bottom: 0;               /* Stick to bottom */
+    width: 100%;             /* Full width */
+    font-family: Arial, sans-serif;
+    line-height: 0.3; 
+}
