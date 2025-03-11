@@ -31,7 +31,7 @@ This application uses computer vision to detect and count people entering and ex
 1. Clone the repository:
    ```
    git clone https://github.com/yourusername/people-counter.git
-   cd people-counter
+   cd Real-Time-Person-Counting-System
    ```
 
 2. Install required packages:
