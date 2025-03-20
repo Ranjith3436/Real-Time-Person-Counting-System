@@ -26,6 +26,9 @@ def point_line_side(p, p1, p2):
     d = (p2[0] - p1[0]) * (p[1] - p1[1]) - (p2[1] - p1[1]) * (p[0] - p1[0])
     return d
 
+def enter_status(In, d):
+    return (In > 0 and d > In) or (In <= 0 and d < In)
+
 # Function to calculate the perpendicular vectors and form the rectangle
 def get_rectangle_coords(p1, p2, padding=100):
     dx = p2[0] - p1[0]
@@ -128,13 +131,14 @@ def process_video():
                             d_old = person_tracks[id]
                             d_new = d
                             multiple = d_new * d_old
+                            entry_status1 = enter_status (In,d_new)
 
-                            if multiple < 0 and d_old < In:
+                            if multiple < 0 and entry_status1 == True:
                                 with lock:  # Ensure thread-safe update
                                     inside_count += 1
                                 del person_tracks[id]
                                 cv2.putText(frame, f"IN", (centroid_x, centroid_y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-                            elif multiple < 0 and d_old > In:
+                            elif multiple < 0 and entry_status1 == False:
                                 with lock:  # Ensure thread-safe update
                                     outside_count += 1
                                 del person_tracks[id]
